@@ -1,0 +1,19 @@
+package com.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.dto.EmpDto;
+import com.repo.EmpRepo;
+@Service
+public class EmpServiceImpl implements EmpService {
+
+	@Autowired
+	EmpRepo repo;
+
+	public void saveemployee(EmpDto empdto) {
+		repo.save(empdto);
+		
+	}
+
+}
